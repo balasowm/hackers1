@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* background-color: #24252A; */
+
+        }
+
+        li,
+        a,
+        button {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: #edf0f1;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+        }
+
+        .logo {
+            cursor: pointer;
+        }
+
+        .nav__links {
+            list-style: none;
+        }
+
+        .nav__links li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        .nav__links li a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .nav__links li a:hover {
+            color: #0088a9
+        }
+
+        button {
+            padding: 9px 25px;
+            background-color: rgba(0, 136, 169, 1);
+            border: none;
+            border-radius: 50px;
+            transition: all 0.3s ease s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 136, 169, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Jost', sans-serif;
+            outline: none;
+            color: #5c4b51;
+        }
+
+        body {
+            background: #24252A;
+        }
+
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #0088a9
+        }
+
+        .form {
+            width: 425px;
+            height: auto;
+            background: #fff;
+            padding: 35px 50px;
+            border-radius: 2px;
+        }
+
+        .form .title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .form .input_wrap {
+            margin-bottom: 20px;
+            width: 325px;
+            position: relative;
+        }
+
+        .form .input_wrap:last-child {
+            margin-bottom: 0;
+        }
+
+        .form .input_wrap label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form .input_wrap input {
+            padding: 15px;
+            width: 100%;
+            border: 1px solid transparent;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+        .form .input_wrap .input {
+            background: #f5f4f4;
+            padding-right: 35px;
+        }
+
+        .form .input_wrap .input:focus {
+            border-color: #1dbf73;
+        }
+
+        .form .input_wrap .input_field {
+            position: relative;
+        }
+
+        .form .input_wrap .btn {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+        }
+
+        .form .input_wrap .btn.disabled {
+            background: #727272;
+        }
+
+        .form .input_wrap .btn.enabled {
+            background: #1dbf73;
+            cursor: pointer;
+        }
+
+        .form .input_wrap .error_msg {
+            font-size: 15px;
+            margin-bottom: 5px;
+            color: #f74040;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Register here to continue......</h1>
+        <nav id="headernav">
+            <ul class="nav__links" id="navlinks" style="display: none;">
+                <li><a href="file:///C:/Users/DELL/Documents/placement.html"> students</li>
+                <li><a href="file:///C:/Users/DELL/Documents/company.html" > companies</li>
+
+            </ul>
+        </nav>
+        <a class="cta" id="logoutbutton" style="display:none;" href="#"><button>logout</button></a>
+    </header>
+
+    <div class="wrapper">
+        <div id="loginform" class="form">
+            <div class="title">
+                REGISTER
+            </div>
+            <div id="form">
+                <div class="input_wrap">
+                    <label for="input_text">Email or Username</label>
+                    <div class="input_field">
+                        <input type="text" class="input" id="input_text">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <label for="input_password">Password</label>
+                    <div class="input_field">
+                        <input type="password" class="input" id="input_password">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <span id="invaliduser" class="error_msg">You are successfully registered</span>
+                    <input type="submit" id="login_btn" class="btn enabled" value="login" f>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     
+
+    <script>
+const students = [
+    {
+        userName: "anusha",
+        password: "anusha",
+        cgpa: 9.5,
+        yearOfJoining: 2021
+    },
+    {
+        userName: "siri",
+        password: "siri",
+        cgpa: 9.5,
+        yearOfJoining: 2021
+    }
+]
+
+
+const companies = [
+    {
+        name: "tcs",
+        studentsRecruited: 200,
+        yearsRecruited: [2017, 2018, 2022],
+    },
+    {
+        name: "cts",
+        studentsRecruited: 401,
+        yearsRecruited: [2017, 2019, 2022]
+    },
+    {
+        name: "infosys",
+        studentsRecruited: 112,
+        yearsRecruited: [2017, 2021, 2022]
+    },
+    {
+        name: "wipro",
+        studentsRecruited: 61,
+        yearsRecruited: [2019]
+    }
+]
+
+validation = () => {
+    var input_text = document.querySelector("#input_text");
+    var input_password = document.querySelector("#input_password");
+    var error_msg = document.querySelector(".error_msg");
+
+    if (input_text.value.length <= 3 || input_password.value.length <= 3) {
+        error_msg.style.display = "inline-block";
+        input_text.style.border = "1px solid #f74040";
+        input_password.style.border = "1px solid #f74040";
+        return false;
+    }
+    else {
+        const user = students.filter(user => {
+            return user.userName == input_text.value && user.password == input_password.value
+        });
+        if (user.length != 0) {
+            document.querySelector("#form").style.display = "none";
+            document.getElementById('logoutbutton').style.display = "block"
+            document.getElementById('loginform').style.display = "none"
+            document.getElementById('navlinks').style.display = "block"
+            document.getElementById('input_text').value = "";
+            document.getElementById('input_password').value = "";
+        }
+        else
+            document.querySelector("#invaliduser").style.display = "block";
+    }
+
+    logout = () => {
+        document.querySelector("#form").style.display = "block";
+        document.getElementById('logoutbutton').style.display = "none"
+        document.getElementById('loginform').style.display = "block"
+        document.getElementById('navlinks').style.display = "none"
+    }
+
+}
+
+        bindLoginButtonEvent = () => {
+            document.getElementById("login_btn").onclick = () => validation();
+             document.getElementById("logoutbutton").onclick = () => logout();
+       
+           }
+
+        (function () {
+            bindLoginButtonEvent();
+        })();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+div>p{
+text-color:red;
+}
+{
+  margin: 100;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image > myslides {
+
+  border: image width 100px;
+  height:100%;
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+</style>
+<body>
+
+<div class="w3-container">
+  
+   <div style="display:inline-block;vertical-align:top">
+<img
+src="https://th.bing.com/th/id/OIP.3FOO4Mfh8s1g6g9Dzr2EdQAAAA?w=156&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"style="border-radius:50%;heigth:100px;width:100px;"/>
+</div>
+<div style="display:inline-block;font-size:xx-large;color:darkmagenta">
+<h1><b>SHRI VISHNU EDUCATIONAL SOCIETY</b></h1><br>
+<h1><i>Placement portal for college</i> </h2>
+</div><br><br>
+
+  <marquee><h3>today's update: optum has hired 50 students today by conducting a online test</h3></marquee>
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="https://thumbs.dreamstime.com/b/graduation-cap-diploma-table-books-150016685.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container  w3-lightblue">
+<div class="tab-content">
+    <div id="home" class="container fluid tab-pane active"><br>
+        <div class="hero-image">
+             <p><h2>What are you waiting for,just..</h2></p>
+             <h1><button type=button class="btn btn-primary"><a href="file:///C:/Users/DELL/Documents/login.html">REGISTER NOW</a></button></h1>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="https://salessense.co.uk/images/Business-Development-450.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-red">
+   <button type=button class="btn btn-danger"><a href="file:///C:/Users/DELL/Documents/form.html">Build Your Resume</a></button>
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="https://www.iiswbm.edu/wp-content/themes/iiswbm/images/placement_banner.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-pink">
+    <button type=button class="btn btn-danger"><a href="file:///C:/Users/DELL/Documents/contact.html">Contact placement cell</a></button>
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="https://hk.jobsdb.com/en-hk/wp-content/uploads/sites/2/3018/05/interview.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-white">
+  <button type=button class="btn btn-danger"><a href="file:///C:/Users/DELL/Documents/placement.html">Year wise Placements</a></button>
+  </div>
+</div>
+
+ 
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
